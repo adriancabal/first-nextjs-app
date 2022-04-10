@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css';
 export default function Home() {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Adrian&apos;s first NextJs app</h1>
+      <h1 className={styles.title}>{"Adrians first NextJs app"}</h1>
      
       {/* <Head>
         <title>Create Next App</title>
