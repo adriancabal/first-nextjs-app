@@ -1,34 +1,54 @@
-import { useRouter } from 'next/router'
+// import { useRouter } from 'next/router'
+import Link from 'next/link';
 
 export default function Header() {
   return (
     <div>
-      <Link href="/">Home</Link>
-      <Link href="/about">About</Link>
-      <Link href="/blog/hello-world">Blog Post</Link>
+      <ul>
+        <li>
+        <Link href="/">
+          <a>Home</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/about">
+            <a>About Us</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/blog/hello-world">
+            <a>Blog Post</a>
+          </Link>
+        </li>
+      </ul>
     </div>
+    // <div>
+    //   <Link href="/">Home</Link>
+    //   <Link href="/about">About</Link>
+    //   <Link href="/blog/hello-world">Blog Post</Link>
+    // </div>
   )
 }
 
-const Link = ({ children, href }) => {
-  const router = useRouter()
-  return (
-    <a
-      href="#"
-      onClick={(e) => {
-        e.preventDefault()
-        // typically you want to use `next/link` for this usecase
-        // but this example shows how you can also access the router
-        // and use it manually
-        router.push(href)
-      }}
-    >
-      {children}
-      <style jsx>{`
-        a {
-          margin-right: 10px;
-        }
-      `}</style>
-    </a>
-  )
-}
+// const Link = ({ children, href }) => {
+//   const router = useRouter()
+//   return (
+//     <a
+//       href="#"
+//       onClick={(e) => {
+//         e.preventDefault()
+//         // typically you want to use `next/link` for this usecase
+//         // but this example shows how you can also access the router
+//         // and use it manually
+//         router.push(href)
+//       }}
+//     >
+//       {children}
+//       <style jsx>{`
+//         a {
+//           margin-right: 10px;
+//         }
+//       `}</style>
+//     </a>
+//   )
+// }
